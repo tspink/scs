@@ -1,0 +1,26 @@
+cpus:
+  cpu0:
+    fetch: l1i
+    read: l1d
+    write: l1d
+
+memory:
+  mem0:
+    size: 8G
+
+caches:
+  l1d:
+    cache_size: 16
+    line_size: 32
+    assoc: 0
+    next: l2
+  l1i:
+    cache_size: 15
+    line_size: 32
+    assoc: 0
+    next: l2
+  l2:
+    cache_size: 25
+    line_size: 32
+    assoc: 0
+    next: mem0
